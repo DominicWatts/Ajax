@@ -1,0 +1,24 @@
+Hello ajax/index.phtml
+
+<input type="hidden" id="product-id" value="123" />
+
+<div class="greet welcome" data-bind="scope: 'ajax'">
+    <!-- ko template: getTemplate() -->
+    <p data-bind="text: html"><?= $block->escapeHtml('Review count to go here'); ?></p>
+    <!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "ajax": {
+                        "component": "Xigen_Ajax/review/ajax",
+                        "template" : "Xigen_Ajax/review/ajax"
+                    }
+                }
+            }
+        }
+    }
+</script>
