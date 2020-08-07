@@ -26,8 +26,8 @@ define([
                 type: "POST",
                 dataType: 'json'
             }).done(function (response) {
-                self.response = response.reviewWording;
-                self.reviewFound = response.reviewFound;
+                self.response(response.reviewWording);
+                self.reviewFound(response.reviewFound);
             }).fail(function (error) {
                 // in case of fail
             }).always(function (error) {
